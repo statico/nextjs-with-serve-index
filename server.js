@@ -1,5 +1,7 @@
 const express = require('express')
 const next = require('next')
+const serveIndex = require('serve-index')
+const { join } = require('path')
 
 const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production'
@@ -21,6 +23,8 @@ app.prepare()
   server.get('*', (req, res) => {
     return handle(req, res)
   })
+
+  server.use(serveIndex(join(__dirname, 'static'), { icons: true }))
 
   server.listen(port, (err) => {
     if (err) throw err
