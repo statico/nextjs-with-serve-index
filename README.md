@@ -1,5 +1,7 @@
 # Next.js with directory listing test
 
+![](https://raw.githubusercontent.com/statico/nextjs-with-serve-index/master/static/data/screenshot.png)
+
 ## How to use
 
 Download the example or clone this repo.
