@@ -9,8 +9,8 @@ Download the example or clone this repo.
 Install it and run:
 
 ```bash
-yarn install
-yarn run dev
+npm install
+npm run dev
 ```
 
 ## The idea behind the example
