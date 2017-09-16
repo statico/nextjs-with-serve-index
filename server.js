@@ -20,11 +20,11 @@ app.prepare()
     return app.render(req, res, '/a', req.query)
   })
 
+  server.use(serveIndex(join(__dirname, 'static'), { icons: true }))
+
   server.get('*', (req, res) => {
     return handle(req, res)
   })
-
-  server.use(serveIndex(join(__dirname, 'static'), { icons: true }))
 
   server.listen(port, (err) => {
     if (err) throw err
